@@ -5,8 +5,6 @@ using QuantityMeasurementAppModelLayer.Enums;
 using QuantityMeasurementAppModelLayer.Entity;
 using QuantityMeasurementAppRepositoryLayer.Interface;
 using QuantityMeasurementAppRepositoryLayer.Database;
-using Azure.Core.Diagnostics;
-using Microsoft.Identity.Client;
 
 namespace QuantityMeasurementAppBusinessLayer.Service
 {
