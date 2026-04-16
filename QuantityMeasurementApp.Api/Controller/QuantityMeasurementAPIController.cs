@@ -24,7 +24,7 @@ namespace QuantityMeasurementApp.Api.Controller
             return claim != null ? int.Parse(claim) : 0;
         }
 
-        // POST api/quantity/compare  â€” no auth required
+        // POST api/quantity/compare  - no auth required
         [AllowAnonymous]
         [HttpPost("compare")]
         public IActionResult Compare([FromBody] QuantityInputDTO input)
@@ -38,7 +38,7 @@ namespace QuantityMeasurementApp.Api.Controller
             return Ok(result);
         }
 
-        // POST api/quantity/add  â€” no auth required
+        // POST api/quantity/add  - no auth required
         [AllowAnonymous]
         [HttpPost("add")]
         public IActionResult Add([FromBody] QuantityInputDTO input)
@@ -52,7 +52,7 @@ namespace QuantityMeasurementApp.Api.Controller
             return Ok(result);
         }
 
-        // POST api/quantity/subtract  â€” no auth required
+        // POST api/quantity/subtract  - no auth required
         [AllowAnonymous]
         [HttpPost("subtract")]
         public IActionResult Subtract([FromBody] QuantityInputDTO input)
@@ -66,7 +66,7 @@ namespace QuantityMeasurementApp.Api.Controller
             return Ok(result);
         }
 
-        // POST api/quantity/divide  â€” no auth required
+        // POST api/quantity/divide  - no auth required
         [AllowAnonymous]
         [HttpPost("divide")]
         public IActionResult Divide([FromBody] QuantityInputDTO input)
@@ -80,7 +80,7 @@ namespace QuantityMeasurementApp.Api.Controller
             return Ok(result);
         }
 
-        // POST api/quantity/convert  â€” no auth required
+        // POST api/quantity/convert  - no auth required
         [AllowAnonymous]
         [HttpPost("convert")]
         public IActionResult Convert([FromBody] ConvertDTO input)
@@ -94,7 +94,7 @@ namespace QuantityMeasurementApp.Api.Controller
             return Ok(result);
         }
 
-        // GET api/quantity/history  â€” AUTH REQUIRED
+        // GET api/quantity/history  - AUTH REQUIRED
         [Authorize]
         [HttpGet("history")]
         public IActionResult GetHistory()
@@ -103,7 +103,7 @@ namespace QuantityMeasurementApp.Api.Controller
             return Ok(history);
         }
 
-        // DELETE api/quantity/history  â€” AUTH REQUIRED
+        // DELETE api/quantity/history  - AUTH REQUIRED
         [Authorize]
         [HttpDelete("history")]
         public IActionResult DeleteHistory()
@@ -112,7 +112,7 @@ namespace QuantityMeasurementApp.Api.Controller
             return Ok(new { message = "History deleted successfully" });
         }
 
-        // GET api/quantity/history/operation/{operationType}  â€” AUTH REQUIRED
+        // GET api/quantity/history/operation/{operationType}  - AUTH REQUIRED
         [Authorize]
         [HttpGet("history/operation/{operationType}")]
         public IActionResult GetHistoryByOperation(string operationType)
@@ -121,7 +121,7 @@ namespace QuantityMeasurementApp.Api.Controller
             return Ok(history);
         }
 
-        // GET api/quantity/history/type/{measurementType}  â€” AUTH REQUIRED
+        // GET api/quantity/history/type/{measurementType}  - AUTH REQUIRED
         [Authorize]
         [HttpGet("history/type/{measurementType}")]
         public IActionResult GetHistoryByType(string measurementType)
@@ -130,7 +130,7 @@ namespace QuantityMeasurementApp.Api.Controller
             return Ok(history);
         }
 
-        // GET api/quantity/stats  â€” AUTH REQUIRED
+        // GET api/quantity/stats  - AUTH REQUIRED
         [Authorize]
         [HttpGet("stats")]
         public IActionResult GetStats()

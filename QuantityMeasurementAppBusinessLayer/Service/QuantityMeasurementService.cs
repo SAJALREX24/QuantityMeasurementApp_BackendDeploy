@@ -122,7 +122,7 @@ namespace QuantityMeasurementAppBusinessLayer.Service
 
         private void SaveHistory(QuantityDTO first,QuantityDTO second,string opr,double result,int userId)
         {
-            // userId == 0 means guest â€” skip saving history
+            // userId == 0 means guest - skip saving history
             if (userId == 0) return;
 
             _repository.SaveToDatabase(new QuantityMeasurementEntity

@@ -1,4 +1,3 @@
-using Microsoft.Data.SqlClient;
 using QuantityMeasurementAppModelLayer.Entity;
 using QuantityMeasurementAppRepositoryLayer.Data;
 using QuantityMeasurementAppRepositoryLayer.Interface;
